@@ -1,38 +1,54 @@
 {
   "name": "hypeflow-ai-pro",
   "version": "1.0.0",
-  "description": "Ultimate AI-Powered Sports Card Investment Platform with eBay Integration",
-  "main": "enhanced-hypeflow-ai-pro.html",
+  "description": "The Ultimate AI-Powered Sports Card Investment Platform",
+  "main": "server.js",
   "scripts": {
-    "start": "python3 -m http.server 3000",
-    "deploy": "./deploy.sh",
-    "build": "echo 'No build step needed - static HTML site'",
-    "vercel": "vercel --prod",
-    "netlify": "netlify deploy --prod --dir=."
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "echo 'Build complete'",
+    "deploy": "node scripts/deploy.js",
+    "test": "echo 'No tests specified'",
+    "lint": "echo 'No linting configured'"
   },
   "keywords": [
     "sports-cards",
-    "trading-cards",
-    "investment",
     "ai",
-    "ebay",
-    "psa",
-    "bgs",
     "grading",
-    "portfolio"
+    "ebay",
+    "investment",
+    "portfolio",
+    "machine-learning",
+    "neural-network",
+    "psa",
+    "bgs"
   ],
-  "author": "HypeFlow AI Pro",
+  "author": "HypeFlow AI Team",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/hypeflow-ai-pro.git"
+    "url": "https://github.com/yourusername/HypeFlow-AI.git"
   },
-  "homepage": "https://hypeflow.com",
-  "engines": {
-    "node": ">=14.0.0"
+  "homepage": "https://yourusername.github.io/HypeFlow-AI",
+  "bugs": {
+    "url": "https://github.com/yourusername/HypeFlow-AI/issues"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "compression": "^1.7.4"
   },
   "devDependencies": {
-    "vercel": "^32.0.0",
-    "netlify-cli": "^15.0.0"
-  }
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }

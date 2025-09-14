@@ -1,0 +1,16 @@
+{
+  "name": "hypeflow-ai-pro",
+  "version": "1.0.0",
+  "description": "Ultimate AI-Powered Sports Card Investment Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

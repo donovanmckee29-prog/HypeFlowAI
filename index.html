@@ -4,34 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HypeFlow AI Pro - Ultimate Sports Card Investment Platform</title>
-    <meta name="description" content="AI-Powered Sports Card Investment Platform with eBay Integration, Portfolio Management, and Market Analysis">
-    <meta name="keywords" content="sports cards, trading cards, investment, ai, ebay, psa, bgs, grading, portfolio, hypeflow">
+    <meta name="description" content="AI-powered sports card grading, eBay integration, and portfolio management. The ultimate platform for card investors.">
+    <meta name="keywords" content="sports cards, AI grading, eBay, investment, portfolio, PSA, BGS, trading cards">
+    <meta name="author" content="HypeFlow AI Team">
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="HypeFlow AI Pro - Ultimate Sports Card Investment Platform">
-    <meta property="og:description" content="AI-Powered Sports Card Investment Platform with eBay Integration, Portfolio Management, and Market Analysis">
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hypeflow.com">
-    <meta property="og:image" content="https://hypeflow.com/og-image.jpg">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="HypeFlow AI Pro - Ultimate Sports Card Investment Platform">
-    <meta name="twitter:description" content="AI-Powered Sports Card Investment Platform with eBay Integration, Portfolio Management, and Market Analysis">
-    <meta name="twitter:image" content="https://hypeflow.com/og-image.jpg">
-    
+    <meta property="og:url" content="https://yourusername.github.io/HypeFlow-AI/">
+    <meta property="og:title" content="HypeFlow AI Pro - Ultimate Sports Card Investment Platform">
+    <meta property="og:description" content="AI-powered sports card grading, eBay integration, and portfolio management. The ultimate platform for card investors.">
+    <meta property="og:image" content="https://yourusername.github.io/HypeFlow-AI/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourusername.github.io/HypeFlow-AI/">
+    <meta property="twitter:title" content="HypeFlow AI Pro - Ultimate Sports Card Investment Platform">
+    <meta property="twitter:description" content="AI-powered sports card grading, eBay integration, and portfolio management. The ultimate platform for card investors.">
+    <meta property="twitter:image" content="https://yourusername.github.io/HypeFlow-AI/assets/og-image.jpg">
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     
+    <!-- Preload main app -->
+    <link rel="preload" href="enhanced-hypeflow-ai-pro.html" as="document">
+    
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #000000 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #000000 100%);
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0;
             color: white;
         }
         
@@ -42,140 +48,120 @@
         }
         
         .logo {
-            font-size: 4rem;
-            font-weight: 900;
+            font-size: 3rem;
+            font-weight: bold;
             margin-bottom: 1rem;
-            background: linear-gradient(45deg, #0066ff, #7c3aed, #06b6d4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            color: #94a3b8;
-        }
-        
-        .description {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            color: #cbd5e1;
-        }
-        
-        .launch-btn {
-            display: inline-block;
-            background: linear-gradient(45deg, #0066ff, #7c3aed);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: bold;
             font-size: 1.2rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
-        }
-        
-        .launch-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 102, 255, 0.4);
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        
-        .feature {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 1rem;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
         }
         
         .loading {
-            display: none;
-            margin-top: 1rem;
-        }
-        
-        .spinner {
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            border-top: 3px solid #0066ff;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(255,255,255,.3);
             border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-bottom: 1rem;
         }
         
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .redirect-text {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .manual-link {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .manual-link:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .features {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            text-align: left;
+        }
+        
+        .feature {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">HYPEFLOW AI PRO</div>
-        <div class="subtitle">Ultimate Sports Card Investment Platform</div>
+        <div class="logo">🚀 HypeFlow AI Pro</div>
+        <div class="subtitle">Ultimate AI-Powered Sports Card Investment Platform</div>
         
-        <div class="description">
-            AI-Powered eBay Integration • Portfolio Management • Market Analysis • 
-            Quantum AI Grader • Real-time Price Tracking • Investment Opportunities
-        </div>
+        <div class="loading"></div>
+        <div class="redirect-text">Redirecting to the main application...</div>
         
-        <a href="enhanced-hypeflow-ai-pro.html" class="launch-btn" onclick="showLoading()">
-            🚀 Launch Platform
+        <a href="enhanced-hypeflow-ai-pro.html" class="manual-link">
+            Click here if not redirected automatically
         </a>
-        
-        <div class="loading" id="loading">
-            <div class="spinner"></div>
-            <p>Loading HypeFlow AI Pro...</p>
-        </div>
         
         <div class="features">
             <div class="feature">
                 <div class="feature-icon">🧠</div>
-                <h3>AI Grader</h3>
-                <p>Quantum neural network card grading</p>
+                <div><strong>AI Grader</strong><br>Neural network card grading</div>
             </div>
             <div class="feature">
                 <div class="feature-icon">🚀</div>
-                <h3>eBay Scanner</h3>
-                <p>Real-time deal hunting with 24+ search strategies</p>
+                <div><strong>eBay Scanner</strong><br>24+ search strategies</div>
             </div>
             <div class="feature">
                 <div class="feature-icon">📊</div>
-                <h3>Portfolio</h3>
-                <p>Track your card investments and profits</p>
+                <div><strong>Portfolio</strong><br>Investment tracking</div>
             </div>
             <div class="feature">
                 <div class="feature-icon">🔮</div>
-                <h3>AI Oracle</h3>
-                <p>Get investment advice and market predictions</p>
+                <div><strong>AI Oracle</strong><br>Investment advice</div>
             </div>
         </div>
     </div>
-    
+
     <script>
-        function showLoading() {
-            document.getElementById('loading').style.display = 'block';
-        }
-        
-        // Auto-redirect after 3 seconds if no interaction
+        // Redirect to main app after a short delay
         setTimeout(() => {
-            if (!document.querySelector('.launch-btn:active')) {
-                window.location.href = 'enhanced-hypeflow-ai-pro.html';
-            }
-        }, 3000);
+            window.location.href = 'enhanced-hypeflow-ai-pro.html';
+        }, 2000);
+        
+        // Track page view
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', {
+                page_title: 'HypeFlow AI Pro Landing',
+                page_location: window.location.href
+            });
+        }
     </script>
 </body>
 </html>
