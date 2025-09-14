@@ -1,0 +1,38 @@
+{
+  "name": "hypeflow-ai-pro",
+  "version": "1.0.0",
+  "description": "Ultimate AI-Powered Sports Card Investment Platform with eBay Integration",
+  "main": "enhanced-hypeflow-ai-pro.html",
+  "scripts": {
+    "start": "python3 -m http.server 3000",
+    "deploy": "./deploy.sh",
+    "build": "echo 'No build step needed - static HTML site'",
+    "vercel": "vercel --prod",
+    "netlify": "netlify deploy --prod --dir=."
+  },
+  "keywords": [
+    "sports-cards",
+    "trading-cards",
+    "investment",
+    "ai",
+    "ebay",
+    "psa",
+    "bgs",
+    "grading",
+    "portfolio"
+  ],
+  "author": "HypeFlow AI Pro",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/hypeflow-ai-pro.git"
+  },
+  "homepage": "https://hypeflow.com",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "vercel": "^32.0.0",
+    "netlify-cli": "^15.0.0"
+  }
+}
