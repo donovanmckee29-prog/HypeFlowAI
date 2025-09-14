@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 HypeFlow AI Pro
 
 **The Ultimate AI-Powered Sports Card Investment Platform**
@@ -177,3 +178,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Made with ❤️ for the sports card community**
 
 *Start your AI-powered card investment journey today!*
+=======
+# HypeFlowAI
+Ultimate AI-Powered Sports Card Investment Platform
+>>>>>>> d111230461b6adee67c355b5efbed96bedf0ebb1
