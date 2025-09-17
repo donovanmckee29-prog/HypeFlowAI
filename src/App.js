@@ -10,19 +10,13 @@ import {
   ArrowRight, 
   CheckCircle, 
   Plus, 
-  Trash2, 
   BarChart3, 
-  ExternalLink, 
   Camera, 
   Loader2, 
-  Lightbulb, 
   Sparkles, 
-  Award, 
   Info, 
   AlertTriangle, 
-  FileText,
-  Menu,
-  Home
+  FileText
 } from 'lucide-react';
 import NavBar from './NavBar';
 
@@ -122,22 +116,15 @@ const ErrorDisplay = ({ error, onDismiss }) => {
 // Main App Component
 const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [apiService] = useState(() => new APIService());
-  const [portfolioValue, setPortfolioValue] = useState(null);
   const [topPicks, setTopPicks] = useState([]);
   const systemStatus = { uptime: 99.97, processingSpeed: 0.642, accuracyRate: 99.4 };
-
-  useEffect(() => {
-    loadPortfolioValue();
-    loadTopPicks();
-  }, []);
 
   const loadPortfolioValue = async () => {
     try {
       const data = await apiService.getPortfolioValue();
-      setPortfolioValue(data);
+      // Portfolio value loaded but not used in current UI
     } catch (err) {
       console.error('Failed to load portfolio:', err);
     }
@@ -151,6 +138,11 @@ const App = () => {
       console.error('Failed to load top picks:', err);
     }
   };
+
+  useEffect(() => {
+    loadPortfolioValue();
+    loadTopPicks();
+  }, [loadPortfolioValue, loadTopPicks]);
 
   // Home Page
   const HomePage = () => (
@@ -920,14 +912,6 @@ const App = () => {
       <NavBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
       <ErrorDisplay error={error} onDismiss={() => setError(null)} />
       
-      {loading && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-40">
-          <div className="bg-slate-800 rounded-2xl p-8 text-center">
-            <Loader2 className="w-12 h-12 text-cyan-400 animate-spin mx-auto mb-4" />
-            <div className="text-white font-medium">Loading...</div>
-          </div>
-        </div>
-      )}
       
       {renderCurrentPage()}
       
