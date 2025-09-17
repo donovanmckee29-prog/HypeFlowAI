@@ -1,6 +1,6 @@
 {
   "name": "hypeflow-ai",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Ultimate AI-Powered Sports Card Investment Platform",
   "private": true,
   "dependencies": {
