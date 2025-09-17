@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { 
   Brain, 
   TrendingUp, 
@@ -121,23 +121,23 @@ const App = () => {
   const [topPicks, setTopPicks] = useState([]);
   const systemStatus = { uptime: 99.97, processingSpeed: 0.642, accuracyRate: 99.4 };
 
-  const loadPortfolioValue = async () => {
+  const loadPortfolioValue = useCallback(async () => {
     try {
-      const data = await apiService.getPortfolioValue();
+      await apiService.getPortfolioValue();
       // Portfolio value loaded but not used in current UI
     } catch (err) {
       console.error('Failed to load portfolio:', err);
     }
-  };
+  }, [apiService]);
 
-  const loadTopPicks = async () => {
+  const loadTopPicks = useCallback(async () => {
     try {
       const data = await apiService.getTopPicks();
       setTopPicks(Array.isArray(data) ? data : [data]);
     } catch (err) {
       console.error('Failed to load top picks:', err);
     }
-  };
+  }, [apiService]);
 
   useEffect(() => {
     loadPortfolioValue();
